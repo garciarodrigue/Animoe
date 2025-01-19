@@ -49,8 +49,6 @@ export function App() {
     <>
       <header className="section_compani">
         <h1 className="hOnePri">AnimeTotal</h1>
-        <img className="noti pNew" src="/public/svgs/menu-icon.svg" alt="Star Icon"/>
-
         <SearchBarButton />
          {/* Componente combinado con barra de búsqueda y botón */}
       </header>
