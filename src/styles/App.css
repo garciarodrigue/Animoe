@@ -1,0 +1,119 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  position: relative;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  background-color: whitesmoke;
+}
+
+.section_compani {
+  top:0;
+  z-index: 1;
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+.section_compani h1 {
+  margin: 0; /* Elimina el margen para evitar desalineación */
+  
+}
+
+.section_compani .noti {
+  top: 0;
+  margin: 0; /* Elimina el margen para evitar desalineación */
+  width: 6rem;
+  height: 2rem;
+  
+   /* Espaciado entre el título y el párrafo */
+}
+
+p {
+  color: black;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  padding: 0px;
+/* Asegura que los hijos se posicionen correctamente */
+}
+
+small{
+  color: black;
+}
+/* .producto {
+  border-radius: 2vh;
+  margin: 5px 0;
+  padding: 35px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1.1rem;
+} */
+.producto {
+  position: relative; /* Necesario para la animación */
+  overflow: hidden; /* Ocultar el contenido que sale del div */
+  border-radius: 2vh;
+  margin: 35px 0; /* Aumentar margen entre divs */
+  padding: 20px; /* Ajustar padding */
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1.1rem;
+  display: flex; /* Usar flex para alinear elementos */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: center; /* Centrar contenido */
+}
+.producto .fecha {
+  color: red;
+  position: absolute;
+  white-space: nowrap; /* Evitar el salto de línea */
+  animation: slide-in 5s linear forwards; /* Aplicar la animación */
+}
+.producto .imgPopu{
+  border-radius: 1rem;
+  width: 70px;
+  height: 70px;
+}
+.search-overlay{
+  top: 40px;
+
+}
+.search-overlay .search-input{
+  top: 0;
+  margin: 0;
+  padding: 5px;
+  position: absolute;
+}
+.producto img {
+  border-radius: 1rem;
+  max-width: 100%; /* Hacer la imagen responsiva */
+  height: auto; /* Mantener proporciones de la imagen */
+  margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%); /* Comenzar fuera del lado derecho */
+    opacity: 0; /* Comenzar invisible */
+  }
+  to {
+    transform: translateX(0); /* Terminar en la posición original */
+    opacity: 1; /* Volver a ser visible */
+  }
+}
